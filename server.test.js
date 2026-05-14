@@ -15,12 +15,11 @@ describe("API Tests", () => {
     expect(res.body.status).toBe("ok");
   });
 
-  // server.test.js — тимчасово змініть:
-test("POST /sum calculates correctly", async () => {
-  const res = await request(app).post("/sum").send({ a: 5, b: 3 });
-  expect(res.body.result).toBe(999); // навмисна помилка
-});
-
+  test("POST /sum calculates correctly", async () => {
+    const res = await request(app).post("/sum").send({ a: 5, b: 3 });
+    expect(res.statusCode).toBe(200);
+    expect(res.body.result).toBe(8);
+  });
 
   test("POST /sum returns error for non-numbers", async () => {
     const res = await request(app).post("/sum").send({ a: "abc", b: 3 });
