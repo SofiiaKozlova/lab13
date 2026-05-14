@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  IMAGE_NAME: SofiiaKozlova/lab13-cicd
+  IMAGE_NAME: soniccobubu/lab13-cicd
 
 jobs:
   test:
