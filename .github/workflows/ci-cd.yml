@@ -9,7 +9,7 @@ on:
 env:
   IMAGE_NAME: soniccobubu/lab13-cicd
 
-jobsh:
+jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest
